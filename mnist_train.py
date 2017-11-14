@@ -33,7 +33,7 @@ from dataloader import *
 
 
 batch_size = 20 # TODO
-lr = 0.1
+lr = 0.08
 epochs = 50
 
 
@@ -102,9 +102,13 @@ def test():
         
         data, target = Variable(data, volatile=True), Variable(target)
         output = model(data)
+        
         test_loss += F.nll_loss(output, target, size_average=False).data[0] # sum up batch loss
         pred = output.data.max(1, keepdim=True)[1] # get the index of the max log-probability
         correct += pred.eq(target.data.view_as(pred)).cpu().sum()
+        print
+
+       
 
     test_loss /= len(test_loader.dataset)
     print('\nTest set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(

@@ -123,12 +123,12 @@ def get_data(trainSize, testSize):
     label_matrix_test = label_matrix_test[1:,:] 
 
 
-    img = Image.fromarray(np_matrix_test[1,:].reshape((28,28)))
-    img.show()
-    print ("label check ", label_matrix_test[1,:])
+    # img = Image.fromarray(np_matrix_test[1,:].reshape((28,28)))
+    # img.show()
+    # print ("label check ", label_matrix_test[1,:])
 
-    print ("matrix sizes", np.shape(np_matrix_train), np.shape(np_matrix_test))
-    print ("label sizes ", np.shape(label_matrix_train), np.shape(label_matrix_test))
+    # print ("matrix sizes", np.shape(np_matrix_train), np.shape(np_matrix_test))
+    # print ("label sizes ", np.shape(label_matrix_train), np.shape(label_matrix_test))
 
 
 
